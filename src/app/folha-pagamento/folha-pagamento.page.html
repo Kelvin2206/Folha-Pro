@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Holerite - Consulta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <!-- Conteúdo do card existente -->
+
+  <!-- Campos de seleção para o ano e o mês -->
+  <ion-card-header>
+    Selecionar Ano e Mês
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list lines="full">
+      <ion-item>
+        <ion-card-header>
+          Ano
+        </ion-card-header>
+        <ion-label>Ano</ion-label>
+        <ion-select interface="anoSelecionado">
+          <ion-select-option value="2018">2018</ion-select-option>
+          <ion-select-option value="2019">2019</ion-select-option>
+          <ion-select-option value="2020">2020</ion-select-option>
+          <ion-select-option value="2021">2021</ion-select-option>
+          <ion-select-option value="2022">2022</ion-select-option>
+          <ion-select-option value="2023">2023</ion-select-option>
+          <!-- Adicione mais anos conforme necessário -->
+        </ion-select>
+      </ion-item>
+      <br> <br>
+      <ion-item>
+        <ion-card-header>
+          Mês
+        </ion-card-header>
+        <ion-label>Mês</ion-label>
+        <ion-select interface="mesSelecionado">
+          <ion-select-option value="01">Janeiro</ion-select-option>
+          <ion-select-option value="02">Fevereiro</ion-select-option>
+          <ion-select-option value="03">Março</ion-select-option>
+          <ion-select-option value="04">Abril</ion-select-option>
+          <ion-select-option value="05">Maio</ion-select-option>
+          <ion-select-option value="06">Junho</ion-select-option>
+          <ion-select-option value="07">Julho</ion-select-option>
+          <ion-select-option value="08">Agosto</ion-select-option>
+          <ion-select-option value="09">Setembro</ion-select-option>
+          <ion-select-option value="10">Outubro</ion-select-option>
+          <ion-select-option value="11">Novembro</ion-select-option>
+          <ion-select-option value="12">Dezembro</ion-select-option>
+          <!-- Adicione mais meses conforme necessário -->
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+
+
+  <!-- Adicione mais informações de pagamento aqui -->
+
+  <ion-button expand="full" color="primary" (click)="consultarFolhaPagamento()">Consultar</ion-button>
+

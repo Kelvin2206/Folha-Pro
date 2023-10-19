@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequisicaoService } from 'src/app/service/requisicao.service';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -19,6 +19,7 @@ export class UsuarioFormPage implements OnInit {
     public requisicao_service:RequisicaoService,
     private loadingController: LoadingController,
     private activated_router: ActivatedRoute,
+    private navCtrl: NavController,
     
     
   ) {
@@ -44,8 +45,12 @@ export class UsuarioFormPage implements OnInit {
 
   }
 
-  async salvar(){
+  entrar(){
+    this.navCtrl.navigateForward('home')
+  }
 
+  async salvar(){
+    
     const loading = await this.loadingController.create({
       message: 'Salvando...',
     });

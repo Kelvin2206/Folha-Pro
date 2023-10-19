@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>resultados</ion-title>
+    <ion-title>
+      Resultados
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">resultados</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let resultado of resultados" (click)="abrirPDF(resultado.pdfUrl)">
+      <ion-icon slot="start" name="document"></ion-icon>
+      <ion-label>
+        Ano: {{ resultado.ano }} - Mês: {{ resultado.mes }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+<script>
+  function abrirPDF(url) {
+    window.open(url, '_system');
+  }
+</script>

@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'resultados',
     loadChildren: () => import('./resultados/resultados.module').then( m => m.ResultadosPageModule)
+  },  {
+    path: 'holerite-page',
+    loadChildren: () => import('./holerite-page/holerite-page.module').then( m => m.HoleritePagePageModule)
   },
+
 ];
 
 @NgModule({

@@ -24,19 +24,25 @@ ion-content {
   }
   
   
-  ion-button {
-    margin: 16px;
-    --background: #007BFF;
-    --border-radius: 8px;
-    --box-shadow: none;
+.button {
+  background-color: transparent; /* Define a cor de fundo como transparente */
+  border: none; /* Remove a borda */
+  color: primary; /* Define a cor do texto com base no tema primary */
+  text-align: left; /* Alinhe o texto ao centro */
   }
 
   ion-input {
-    --highlight-color-focused: #007BFF; 
+    --highlight-color-focused: #00ff62; 
   }
 
 .header-image {
   width: 200px; 
   height:70px; 
-  
+}
+#meuBotao {
+  transition: transform 0.2s ease; /* Adiciona uma transição para a propriedade 'transform' */
+}
+
+#meuBotao:active {
+  transform: scale(0.95); /* Reduz o tamanho do botão quando pressionado */
 }

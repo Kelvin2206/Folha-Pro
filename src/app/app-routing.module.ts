@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'holerite-page',
     loadChildren: () => import('./holerite-page/holerite-page.module').then( m => m.HoleritePagePageModule)
   },
+  {
+    path: 'resultado',
+    loadChildren: () => import('./resultado/resultado.module').then( m => m.ResultadoPageModule)
+  },
 
 ];
 

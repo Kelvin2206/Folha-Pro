@@ -1,7 +1,7 @@
   <ion-header>
     <ion-toolbar>
         <ion-img src="https://github.com/Kelvin2206/Folha-Pro/blob/master/src/assets/Formulario.png?raw=true" class="header-image"></ion-img>
-        <ion-button fill="clear" slot="end" [routerLink]="['/home']">
+        <ion-button  fill="clear" slot="end" [routerLink]="['/home']" class="btn" >
           <ion-icon name="arrow-back-outline"></ion-icon>
         </ion-button>
          </ion-toolbar>
@@ -51,7 +51,9 @@
     </ion-item>
   </ion-list>
 
-  <ion-button expand="full" (click)="showToast()">Enviar</ion-button>
+  <ion-button id="meuBotao" expand="full" class="button" (click)="showToast()">Enviar</ion-button>
+
+
 </ion-content>
 
 

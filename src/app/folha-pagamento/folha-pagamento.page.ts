@@ -13,7 +13,7 @@ export class FolhaPagamentoPage {
     // Capturar os valores selecionados do ano e do mês, se necessário
 
     // Redirecionar para a página "resultados"
-    this.router.navigate(['/resultados']);
+    this.router.navigate(['/resultado']);
   }
 }
 

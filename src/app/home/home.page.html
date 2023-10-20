@@ -1,23 +1,45 @@
 <ion-menu side="end" contentId="main-content">
+
   <ion-header>
+
     <ion-toolbar>
-      <ion-title>Inicio</ion-title>
+
+      <ion-title>Menu</ion-title>
+
     </ion-toolbar>
+
   </ion-header>
+
   <ion-content class="ion-padding">
-    <ion-button fill="clear" expand="full">Nova Holerite</ion-button><br>
-    <ion-button fill="clear" expand="full">Consulta</ion-button><br>
-    <ion-button fill="clear" expand="full">Sair</ion-button>
+
+    <ion-button fill="clear" expand="full" (click)="navigateToHoleritePage()">Nova Holerite</ion-button>
+
+    <ion-button fill="clear" expand="full" (click)="navigateToFolhaPagamento()">Consulta</ion-button>
+
+    <ion-button fill="clear" expand="full" (click)="navigateToUsuarioForm()">Sair</ion-button>    
+
   </ion-content>
+
 </ion-menu>
+
 <div class="ion-page" id="main-content">
+
   <ion-header>
+
     <ion-toolbar>
-      <ion-title>FolhaPro</ion-title>
+
+      <ion-img src="https://github.com/Kelvin2206/Folha-Pro/blob/master/src/assets/Logoescrita.png?raw=true" class="header-image"></ion-img>  
+
       <ion-buttons slot="end">
+
         <ion-menu-button></ion-menu-button>
+
       </ion-buttons>
+
     </ion-toolbar>
+
   </ion-header>
+
   <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+
 </div>

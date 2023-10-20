@@ -1,5 +1,7 @@
+// holerite-page.page.ts
 import { Component } from '@angular/core';
-import { ToastController } from '@ionic/angular'; // Importe o ToastController
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-holerite-page',
@@ -8,13 +10,17 @@ import { ToastController } from '@ionic/angular'; // Importe o ToastController
 })
 export class HoleritePagePage {
 
-  constructor(private toastController: ToastController) { }
+  constructor(private router: Router, private toastController: ToastController) { }
+
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
 
   async showToast() {
     const toast = await this.toastController.create({
       message: 'Formulário cadastrado com sucesso',
-      duration: 2000, // A mensagem será exibida por 2 segundos
-      color: 'success', // Define a cor como verde
+      duration: 2000,
+      color: 'success',
     });
     toast.present();
   }

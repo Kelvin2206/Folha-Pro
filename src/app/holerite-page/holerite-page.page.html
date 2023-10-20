@@ -1,10 +1,10 @@
   <ion-header>
     <ion-toolbar>
-      <a (click)="navigateToHome()">
         <ion-img src="https://github.com/Kelvin2206/Folha-Pro/blob/master/src/assets/Formulario.png?raw=true" class="header-image"></ion-img>
-      </a>
-      <ion-button fill="clear" slot="end"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
-    </ion-toolbar>
+        <ion-button fill="clear" slot="end" [routerLink]="['/home']">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+         </ion-toolbar>
 
 </ion-header>
 

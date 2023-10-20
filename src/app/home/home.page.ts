@@ -7,9 +7,7 @@ import { Router } from '@angular/router';
 @Component({
 
   selector: 'app-home',
-
   templateUrl: 'home.page.html',
-
   styleUrls: ['home.page.scss'],
 
 })
@@ -25,4 +23,5 @@ export class HomePage {
   navigateToUsuarioForm() {
     this.router.navigate(['/usuario-form']);
   }
+
 }

@@ -1,10 +1,12 @@
+
+.green-icon {
+  color: green;
+}
 .custom-button {
-  background-color: transparent;
-  text-align: left;
-  color: initial;
-  transition: background-color 0.3s ease-in-out;
+  background: none;
 }
 
-.custom-button:hover {
-  background-color: #00ff00; /* Verde quando o mouse está sobre o botão */
+.green-icon {
+  color: green;
 }
+

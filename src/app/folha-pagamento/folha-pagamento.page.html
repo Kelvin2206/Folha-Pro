@@ -6,58 +6,46 @@
     </ion-button>
      </ion-toolbar>
 </ion-header>
-
 <ion-card>
-
   <ion-card-header>
     Selecionar Ano e Mês
   </ion-card-header>
   <ion-card-content>
-    <ion-list lines="full">
-      <ion-item>
-        <ion-card-header>
-          Ano
-        </ion-card-header>
-        <ion-label>Ano</ion-label>
-        <ion-select interface="anoSelecionado">
-          <ion-select-option value="todos">Todos</ion-select-option>
-          <ion-select-option value="2018">2018</ion-select-option>
-          <ion-select-option value="2019">2019</ion-select-option>
-          <ion-select-option value="2020">2020</ion-select-option>
-          <ion-select-option value="2021">2021</ion-select-option>
-          <ion-select-option value="2022">2022</ion-select-option>
-          <ion-select-option value="2023">2023</ion-select-option>
-          <!-- Adicione mais anos -->
-        </ion-select>
-      </ion-item>
-      <br> <br>
-      <ion-item>
-        <ion-card-header>
-          Mês
-        </ion-card-header>
-        <ion-label>Mês</ion-label>
-        <ion-select interface="mesSelecionado">
-          <ion-select-option value="01">Janeiro</ion-select-option>
-          <ion-select-option value="02">Fevereiro</ion-select-option>
-          <ion-select-option value="03">Março</ion-select-option>
-          <ion-select-option value="04">Abril</ion-select-option>
-          <ion-select-option value="05">Maio</ion-select-option>
-          <ion-select-option value="06">Junho</ion-select-option>
-          <ion-select-option value="07">Julho</ion-select-option>
-          <ion-select-option value="08">Agosto</ion-select-option>
-          <ion-select-option value="09">Setembro</ion-select-option>
-          <ion-select-option value="10">Outubro</ion-select-option>
-          <ion-select-option value="11">Novembro</ion-select-option>
-          <ion-select-option value="12">Dezembro</ion-select-option>
-          <!-- Adicione mais meses  -->
-        </ion-select>
-      </ion-item>
-    </ion-list>
-  </ion-card-content>
+<ion-list lines="full">
+  <ion-item>
+    <ion-label>Ano</ion-label>
+    <ion-select interface="popover" [(ngModel)]="selectedYear" class="iop">
+      <ion-select-option value="todos">Todos</ion-select-option>
+      <ion-select-option value="ano-2023">2023</ion-select-option>
+      <ion-select-option value="ano-2022">2022</ion-select-option>
+      <ion-select-option value="ano-2021">2021</ion-select-option>
+      <ion-select-option value="ano-2020">2020</ion-select-option>
+      <ion-select-option value="ano-2019">2019</ion-select-option>
+      <ion-select-option value="ano-2028">2018</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Mês</ion-label>
+    <ion-select interface="popover" [(ngModel)]="selectedMonth">
+      <ion-select-option value="mes-janeiro">Janeiro</ion-select-option>
+      <ion-select-option value="mes-fevereiro">Fevereiro</ion-select-option>
+      <ion-select-option value="mes-marco">Março</ion-select-option>
+      <ion-select-option value="mes-abril">Abril</ion-select-option>
+      <ion-select-option value="mes-maio">Maio</ion-select-option>
+      <ion-select-option value="mes-junho">Junho</ion-select-option>
+      <ion-select-option value="mes-julho">Julho</ion-select-option>
+      <ion-select-option value="mes-agosto">Agosto</ion-select-option>
+      <ion-select-option value="mes-setembro">Setembro</ion-select-option>
+      <ion-select-option value="mes-outubro">Outubro</ion-select-option>
+      <ion-select-option value="mes-novembro">Novembro</ion-select-option>
+      <ion-select-option value="mes-dezembro">Dezembro</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</ion-card-content>
 </ion-card>
+<ion-button expand="full" color="primary" (click)="navigateToSelectedMonth()">Ir para o Mês Selecionado</ion-button>
 
 
-  <!-- Adicione mais informações de pagamento aqui -->
 
-  <ion-button expand="full" color="primary" (click)="consultarFolhaPagamento()">Consultar</ion-button>
 

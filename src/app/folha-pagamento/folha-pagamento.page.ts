@@ -1,5 +1,8 @@
+// folha-pagamento.page.ts
+
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';  // Importe o Router
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-folha-pagamento',
@@ -7,13 +10,27 @@ import { Router } from '@angular/router';  // Importe o Router
   styleUrls: ['./folha-pagamento.page.scss'],
 })
 export class FolhaPagamentoPage {
-  constructor(private router: Router) {}
+  selectedYear: string = 'ano-2018';
+  selectedMonth: string = 'janeiro';
+  private toast: any;
 
-  consultarFolhaPagamento() {
-    // Capturar os valores selecionados do ano e do mês, se necessário
+  constructor(private router: Router, private toastController: ToastController) {}
 
-    // Redirecionar para a página "resultados"
-    this.router.navigate(['/resultado']);
+  navigateToSelectedMonth() {
+    if (!this.selectedMonth || !this.selectedYear || this.selectedMonth === 'Todos') {
+      this.presentToast('Selecione um mês e um ano antes de navegar.');
+    } else {
+      const route = `/${this.selectedMonth}`;
+      this.router.navigate([route]);
+    }
+  }
+
+  async presentToast(message: string) {
+    this.toast = await this.toastController.create({
+      message: message,
+      duration: 2000,
+      color: 'danger',
+    });
+    this.toast.present();
   }
 }
-

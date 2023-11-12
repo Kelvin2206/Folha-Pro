@@ -14,7 +14,8 @@
 <ion-list lines="full">
   <ion-item>
     <ion-label>Ano</ion-label>
-    <ion-select interface="popover" [(ngModel)]="selectedYear" class="iop">
+    <ion-select interface="popover" [(ngModel)]="selectedYear">
+      <ion-select-option value="todos">Ano</ion-select-option>
       <ion-select-option value="todos">Todos</ion-select-option>
       <ion-select-option value="ano-2023">2023</ion-select-option>
       <ion-select-option value="ano-2022">2022</ion-select-option>
@@ -27,6 +28,7 @@
   <ion-item>
     <ion-label>Mês</ion-label>
     <ion-select interface="popover" [(ngModel)]="selectedMonth">
+      <ion-select-option value="todos">Mês</ion-select-option>
       <ion-select-option value="mes-janeiro">Janeiro</ion-select-option>
       <ion-select-option value="mes-fevereiro">Fevereiro</ion-select-option>
       <ion-select-option value="mes-marco">Março</ion-select-option>
@@ -44,7 +46,7 @@
 </ion-list>
 </ion-card-content>
 </ion-card>
-<ion-button expand="full" color="primary" (click)="navigateToSelectedMonth()">Ir para o Mês Selecionado</ion-button>
+<ion-button expand="full" color="primary" (click)="navigateToSelectedMonth()">Ir para Data Selecionada</ion-button>
 
 
 

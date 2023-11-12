@@ -24,10 +24,6 @@ const routes: Routes = [
     path: 'holerite-page',
     loadChildren: () => import('./holerite-page/holerite-page.module').then( m => m.HoleritePagePageModule)
   },
-  {
-    path: 'resultado',
-    loadChildren: () => import('./resultado/resultado.module').then( m => m.ResultadoPageModule)
-  },
   { path: 'mes-janeiro', loadChildren: () => import('./mes/janeiro/janeiro.module').then(m => m.JaneiroPageModule) },
   { path: 'mes-fevereiro', loadChildren: () => import('./mes/fevereiro/fevereiro.module').then(m => m.FevereiroPageModule) },
   { path: 'mes-marco', loadChildren: () => import('./mes/marco/marco.module').then(m => m.MarcoPageModule) },
